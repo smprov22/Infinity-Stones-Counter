@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Cinzel+Decorative|Cormorant+Unicase|Della+Respira|Julius+Sans+One|Marcellus+SC|Overlock+SC|Spectral+SC|Staatliches" rel="stylesheet">
+    <title>Infinity Stones Collector</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+          <h1>Infinity Stones Collector</h1>
+          <p class="directions">Thanos has all the infinity stones and wiped out half of earth's population. The Avengers, what's left of them, are figuring out how to defeat Thanos, but you can do your part by collecting Infinity Stones!</p>
+          <p class="directions">You will be given a random number at the start of the game. The object of the game is to click on the infinity stones below, each with a random, hidden value, and try and match the number given to you at the start of the game.</p>
+          <p class="directions">If you match the number you win, but if you go over the given number, you lose.  Each time you play there will be a new number generated, and new values for the stones.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm numberTotals" >
+            <h3 class="numHeader">Random Number</h3>
+            <p id="randomNum"></p>
+        </div>
+        <div class="col-sm numberTotals">
+            <h3 class="numHeader">Stone Counter</h3>
+            <p id="stoneTotal"></p>
+        </div>
+        <div class="col-sm numberTotals" id="winLoseTracker">
+            <h5 class= winLose>Wins: </h5>
+            <p id="wins"></p>
+            <br>
+            <h5 class="winLose">Losses: </h5>
+            <p id="losses"></p>
+            <p id="gameOverText"></p>
+        </div>
+        <div class="col-sm"></div>    
+    </div>
+    <div class="row">
+        <div class="stones">
+                <img id="blueStone" src="assets/images/bluestone.png" alt="Blue Infinity Stone">
+                <img id="greenStone" src="assets/images/greenstone.png" alt="Green Infinity Stone">
+                <img id="redStone" src="assets/images/redstone.png" alt="Red Infinity Stone">
+                <img id="yellowStone" src="assets/images/yellowstone.png" alt="Yellow Infinity Stone">
+        </div>
+    </div>
+</body>
+</html>
