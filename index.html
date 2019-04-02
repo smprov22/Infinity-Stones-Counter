@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Cinzel+Decorative|Cormorant+Unicase|Della+Respira|Julius+Sans+One|Marcellus+SC|Overlock+SC|Spectral+SC|Staatliches" rel="stylesheet">
     <title>Infinity Stones Collector</title>
 </head>
@@ -33,6 +34,7 @@
             <h5 class= winLose>Wins: </h5>
             <p id="wins"></p>
             <br>
+            <br>
             <h5 class="winLose">Losses: </h5>
             <p id="losses"></p>
             <p id="gameOverText"></p>
@@ -41,10 +43,18 @@
     </div>
     <div class="row">
         <div class="stones">
-                <img class="infStone" src="assets/images/bluestone.png" alt="Blue Infinity Stone">
-                <img class="infStone" src="assets/images/greenstone.png" alt="Green Infinity Stone">
-                <img class="infStone" src="assets/images/redstone.png" alt="Red Infinity Stone">
-                <img class="infStone" src="assets/images/yellowstone.png" alt="Yellow Infinity Stone">
+                <div class="infStone">
+                    <img id="blueStone" src="assets/images/bluestone.png" alt="Blue Infinity Stone">
+                </div>
+                <div class="infStone">    
+                    <img id="greenStone" src="assets/images/greenstone.png" alt="Green Infinity Stone">
+                 </div>
+                <div class="infStone">
+                    <img id="redStone" src="assets/images/redstone.png" alt="Red Infinity Stone">
+                </div>
+                <div class="infStone">
+                    <img id="yellowStone" src="assets/images/yellowstone.png" alt="Yellow Infinity Stone">
+                </div>
         </div>
     </div>
     
