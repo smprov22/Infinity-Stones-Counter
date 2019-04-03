@@ -3,8 +3,6 @@ $(document).ready(function() {
     //Things to track (variables)
         //value of random number
     var randomNum;
-        //value of stones added together
-    var stoneCounter;
         //wins
     var wins = 0;
         //losses
@@ -58,17 +56,11 @@ $(document).ready(function() {
         //reset stone counter to 0
         previousNum = 0;
 
-        //stone counter set to 0
+        //stone counter text set to 0
         $("#stoneTotal").text(0);
         //random number shows up in appropriate box
         $("#randomNum").text(randomNum);
     }
-
-    //HTML Changes each round
-        //Change the value of random number each round
-        //Change value of Stone Counter as each stone is clicked
-        //Change value of wins and losses after each round
-        //Have "You Win" or "You lose" text come up upon completion of each round
 
     //Make each stone clickable and add their content to "Stone Counter"
     $("#blueStone").on("click", function() {
