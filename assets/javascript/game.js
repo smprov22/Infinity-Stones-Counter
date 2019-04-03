@@ -4,11 +4,13 @@ $(document).ready(function() {
         //value of random number
     var randomNum;
         //value of stones added together
-    var stoneCounter = 0;
+    var stoneCounter;
         //wins
-    var wins;
+    var wins = 0;
         //losses
-    var losses;
+    var losses = 0;
+        //stores previous number
+    var previousNum = 0;
 
     //value of each stone
     var blueStone = 1 + Math.floor(Math.random() * 12);
@@ -31,7 +33,7 @@ $(document).ready(function() {
     console.log(randomNum);
     
     //stone counter set to 0
-    $("#stoneTotal").text(0);
+    $("#stoneTotal").text();
     //random number shows up in appropriate box
     $("#randomNum").text(randomNum);
     //display wins and losses to start
@@ -53,6 +55,9 @@ $(document).ready(function() {
         //value of random number
         randomNum = 19 + Math.floor(Math.random() * 102)
 
+        //reset stone counter to 0
+        previousNum = 0;
+
         //stone counter set to 0
         $("#stoneTotal").text(0);
         //random number shows up in appropriate box
@@ -67,39 +72,88 @@ $(document).ready(function() {
 
     //Make each stone clickable and add their content to "Stone Counter"
     $("#blueStone").on("click", function() {
-        // console.log($(this).attr("data-random"));
-            var newTotal = (blueStone + stoneCounter);
-                $("#stoneTotal").text(newTotal);
+        var number = parseInt($(this).attr("data-random"));
+        previousNum += number;
+        console.log(previousNum)
+        $("#stoneTotal").text(previousNum);
+
+        if (previousNum > randomNum) {
+            $("#gameOverText").text("You lost!!");
+            losses ++
+            $("#losses").text(losses);
+            reset();
+        }
+        
+        else if (previousNum === randomNum) {
+            $("#gameOverText").text("You win!!");
+            wins ++
+            $("#wins").text(wins);
+            reset();
+        }
+
     })
 
     $("#greenStone").on("click", function() {
-        // console.log($(this).attr("data-random"));
-            var newTotal = (greenStone + stoneCounter);
-                $("#stoneTotal").text(newTotal);
+        var number = parseInt($(this).attr("data-random"));
+        previousNum += number;
+        console.log(previousNum)
+        $("#stoneTotal").text(previousNum);
+
+        if (previousNum > randomNum) {
+            $("#gameOverText").text("You lost!!");
+            losses ++
+            $("#losses").text(losses);
+            reset();
+        }
+        
+        else if (previousNum === randomNum) {
+            $("#gameOverText").text("You win!!");
+            wins ++
+            $("#wins").text(wins);
+            reset();
+        }
     })
 
     $("#redStone").on("click", function() {
-        // console.log($(this).attr("data-random"));
-            var newTotal = (redStone + stoneCounter);
-                $("#stoneTotal").text(newTotal);
+        var number = parseInt($(this).attr("data-random"));
+        previousNum += number;
+        console.log(previousNum)
+        $("#stoneTotal").text(previousNum);
+       
+        if (previousNum > randomNum) {
+            $("#gameOverText").text("You lost!!");
+            losses ++
+            $("#losses").text(losses);
+            reset();    
+        }
+        
+        else if (previousNum === randomNum) {
+            $("#gameOverText").text("You win!!");
+            wins ++
+            $("#wins").text(wins);
+            reset();
+        }
     })
 
     $("#yellowStone").on("click", function() {
-        // console.log($(this).attr("data-random"));
-            var newTotal = (yellowStone + stoneCounter);
-                $("#stoneTotal").text(newTotal);
+        var number = parseInt($(this).attr("data-random"));
+        previousNum += number;
+        console.log(previousNum)
+        $("#stoneTotal").text(previousNum);
+
+        if (previousNum > randomNum) {
+            $("#gameOverText").text("You lost!!");
+            losses ++
+            $("#losses").text(losses);
+            reset();
+        }
+        
+        else if (previousNum === randomNum) {
+            $("#gameOverText").text("You win!!");
+            wins ++
+            $("#wins").text(wins);
+            reset ();
+        }
     })
 
-
-
-    //Add value of stone to "Stone Counter" total when clicked
-
-
-    //Compare value of "Random Number" to "Stone Counter" to see if they match
-
-    //If they match, user wins, if the value of stone counter is greater than the value of the random number, they lose.
-
-    //MAIN PROCCESS
-    //-------------------------------------------	
-    //Initiates the Code
 })       
