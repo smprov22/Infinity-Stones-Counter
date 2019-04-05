@@ -25,7 +25,7 @@ for(var i = 0; i < 4; i++) {
     var stoneVal = 1 + Math.floor(Math.random() * 12);
     //appends random number to each stone
     $(`#stone${i}`).attr({"data-random": stoneVal });
-    console.log(stoneVal);
+    // console.log(stoneVal);
 }
     // Make each stone clickable and add their content to "Stone Counter"
     $(".stone").on("click", function() {
@@ -33,7 +33,7 @@ for(var i = 0; i < 4; i++) {
         var number = parseInt($(this).attr("data-random"));
         //adds the number clicked to the stone counter
         count += number;
-        console.log(count)
+        // console.log(count)
         //adds the count text to the html
         $("#stoneTotal").text(count);
         
@@ -46,7 +46,7 @@ for(var i = 0; i < 4; i++) {
             losses ++
             //Add # of losses to the html  
             $("#losses").text(losses);
-            //reset the game
+            //resets the game
             reset();
         }
         
@@ -58,7 +58,7 @@ for(var i = 0; i < 4; i++) {
             wins ++
             //Add # of wins to the html
             $("#wins").text(wins);
-            //reset
+            //resets the game
             reset();
         }
     })
